@@ -1,13 +1,15 @@
 import "./App.css";
-import { TextInput } from "./components/TextInput.tsx";
-import { TextOutput } from "./components/TextOutput.tsx";
+import { Input } from "./components/Input.tsx";
+import { Consonants } from "./components/Consonants.tsx";
+import { Vowels } from "./components/Vowels.tsx";
 
 function App() {
   return (
     <>
-      <div className="flex flex-col gap-3">
-        <TextInput />
-        <TextOutput />
+      <div className='flex flex-col gap-3 p-16'>
+        <Input />
+        <Consonants />
+        <Vowels />
       </div>
     </>
   );

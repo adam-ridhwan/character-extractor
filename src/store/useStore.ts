@@ -1,16 +1,19 @@
 import { create } from "zustand";
 
 type State = {
-  text: string;
+  consonants: string;
+  vowels: string;
 };
 
 type Action = {
-  updateText: (text: State["text"]) => void;
+  updateText: (consonants: State["consonants"]) => void;
+  updateRemovedVowels: (vowels: State["vowels"]) => void;
 };
 
 // create store
-
 export const useStore = create<State & Action>((set) => ({
-  text: "",
-  updateText: (text) => set(() => ({ text: text })),
+  consonants: "",
+  vowels: "",
+  updateText: (consonants) => set(() => ({ consonants: consonants })),
+  updateRemovedVowels: (vowels) => set(() => ({ vowels: vowels })),
 }));
