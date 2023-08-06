@@ -19,18 +19,21 @@ export const Input = () => {
     updateNumbers(getNumbers(e.target.value));
   };
 
-  console.log(useStore.getState());
-
   return (
     <>
       <label htmlFor='sentence' className='flex flex-col'>
-        <span className='text-6xl font-semibold'>Enter a sentence: </span>
+        <span
+          className='font-semibold
+          text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+        >
+          Enter a sentence:
+        </span>
         <span className='text-xl italic'>This text input separates consonants, vowels, numbers and symbols.</span>
       </label>
       <input
         type='text'
         id='sentence'
-        className='rounded rounded-l-none focus:outline-none px-3 py-2 w-60'
+        className='rounded rounded-l-none focus:outline-none px-3 py-2 w-80'
         onChange={handleUpdateText}
         autoComplete='off'
       />
