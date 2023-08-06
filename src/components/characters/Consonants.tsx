@@ -5,9 +5,14 @@ export const Consonants = () => {
 
   return (
     <>
-      <div className='w-60 bg-sky-800 rounded-xl p-3 h-min'>
-        <span className='flex justify-center font-semibold text-lg'>Consonants</span>
-        <p className='break-words'>{consonants}</p>
+      <div
+        className='bg-blue rounded-xl p-3 h-min 
+        w-[350px] sm:w-[500px] md:w-[650px] lg:w-[225px] xl:w-[300px] 2xl:w-[350px]'
+      >
+        <span className='flex justify-center font-semibold text-lg border-b border-1 border-b-slate-400'>
+          Consonants
+        </span>
+        <p className='break-all min-h-[50px]'>{consonants}</p>
       </div>
     </>
   );

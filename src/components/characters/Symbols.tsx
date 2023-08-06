@@ -5,9 +5,12 @@ export const Symbols = () => {
 
   return (
     <>
-      <div className='w-60 bg-red-800 rounded-xl p-3 h-min'>
-        <span className='flex justify-center font-semibold text-lg'>Symbols</span>
-        <p className='break-words'>{symbols}</p>
+      <div
+        className='bg-green rounded-xl p-3 h-min
+        w-[350px] sm:w-[500px] md:w-[650px] lg:w-[225px] xl:w-[300px] 2xl:w-[350px]'
+      >
+        <span className='flex justify-center font-semibold text-lg border-b border-1 border-b-slate-400'>Symbols</span>
+        <p className='break-all min-h-[50px]'>{symbols}</p>
       </div>
     </>
   );

@@ -8,9 +8,12 @@ import { Numbers } from "./components/characters/Numbers.tsx";
 function App() {
   return (
     <>
-      <div className='flex flex-col gap-5 p-16 w-full md:w-[900px] l:w-[1000px] xl:w-[1200px] 2xl:w-[1400px]'>
+      <div
+        className='flex flex-col gap-5 pt-10 lg:pt-20
+        w-[350px] sm:w-[500px] md:w-[650px] lg:w-[900px] xl:w-[1200px] 2xl:w-[1400px]'
+      >
         <Input />
-        <div className='flex justify-between gap-x-8 mt-10'>
+        <div className='flex justify-between flex-col lg:flex-row gap-8 mt-10'>
           <Consonants />
           <Vowels />
           <Symbols />

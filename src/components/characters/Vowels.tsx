@@ -5,9 +5,12 @@ export const Vowels = () => {
 
   return (
     <>
-      <div className='w-60 bg-green-800 rounded-xl p-3 h-min'>
-        <span className='flex justify-center font-semibold text-lg'>Vowels</span>
-        <p className='break-words'>{vowels}</p>
+      <div
+        className='bg-red rounded-xl p-3 h-min
+        w-[350px] sm:w-[500px] md:w-[650px] lg:w-[225px] xl:w-[300px] 2xl:w-[350px]'
+      >
+        <span className='flex justify-center font-semibold text-lg border-b border-b-slate-400'>Vowels</span>
+        <p className='break-all min-h-[50px]'>{vowels}</p>
       </div>
     </>
   );
