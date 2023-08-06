@@ -2,18 +2,21 @@ import { useStore } from "../store/useStore.ts";
 import { getVowels } from "../lib/getVowels.ts";
 import { getConsonants } from "../lib/getConsonants.ts";
 import { getSymbols } from "../lib/getSymbols.ts";
+import { getNumbers } from "../lib/getNumbers.ts";
 
 export const Input = () => {
-  const [updateConsonants, updateVowels, updateSymbols] = useStore((state) => [
+  const [updateConsonants, updateVowels, updateSymbols, updateNumbers] = useStore((state) => [
     state.updateConsonants,
     state.updateVowels,
     state.updateSymbols,
+    state.updateNumbers,
   ]);
 
   const handleUpdateText = (e: React.ChangeEvent<HTMLInputElement>) => {
     updateConsonants(getConsonants(e.target.value));
     updateVowels(getVowels(e.target.value));
     updateSymbols(getSymbols(e.target.value));
+    updateNumbers(getNumbers(e.target.value));
   };
 
   console.log(useStore.getState());
