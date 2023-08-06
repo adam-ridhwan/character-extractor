@@ -1,9 +1,9 @@
 export const getConsonants = (text: string): string => {
-  // Regular expression to match vowels
-  const vowels = /[aeiouAEIOU]/g;
+  // Regular expression to match vowels, symbols, numbers, and spaces.
+  const unwantedCharacters = /[aeiouAEIOU0-9\s\W_]/g;
 
-  // Replace vowels with an empty string
-  const textWithoutVowels = text.replace(vowels, "");
+  // Replace unwanted characters with an empty string
+  const consonants = text.replace(unwantedCharacters, "");
 
-  return textWithoutVowels;
+  return consonants;
 };

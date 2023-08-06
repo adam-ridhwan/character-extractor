@@ -1,17 +1,19 @@
 import { useStore } from "../store/useStore.ts";
 import { getVowels } from "../lib/getVowels.ts";
 import { getConsonants } from "../lib/getConsonants.ts";
+import { getSymbols } from "../lib/getSymbols.ts";
 
 export const Input = () => {
-  const [consonants, updateText, updateRemovedVowels] = useStore((state) => [
-    state.consonants,
-    state.updateText,
-    state.updateRemovedVowels,
+  const [updateConsonants, updateVowels, updateSymbols] = useStore((state) => [
+    state.updateConsonants,
+    state.updateVowels,
+    state.updateSymbols,
   ]);
 
   const handleUpdateText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    updateText(getConsonants(e.target.value));
-    updateRemovedVowels(getVowels(consonants + e.target.value));
+    updateConsonants(getConsonants(e.target.value));
+    updateVowels(getVowels(e.target.value));
+    updateSymbols(getSymbols(e.target.value));
   };
 
   console.log(useStore.getState());
@@ -19,8 +21,8 @@ export const Input = () => {
   return (
     <>
       <label htmlFor='sentence' className='flex flex-col'>
-        <span className='text-lg font-semibold'>Enter a sentence: </span>
-        <span className='italic text-xs'>(This input removes vowels)</span>
+        <span className='text-6xl font-semibold'>Enter a sentence: </span>
+        <span className='text-xl italic'>This text input separates consonants, vowels, numbers and symbols.</span>
       </label>
       <input
         type='text'
