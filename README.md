@@ -16,3 +16,13 @@ npm run dev
 ### Or go to the following link:
 
 [Character Extractor](https://character-extractor.vercel.app/)
+
+<br/>
+<br/>
+
+Technologies used:
+
+1) React
+2) Vite
+3) Tailwind CSS
+4) Zustand
