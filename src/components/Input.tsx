@@ -33,7 +33,7 @@ export const Input = () => {
       <input
         type='text'
         id='sentence'
-        className='rounded px-3 py-2 w-80 bg-gray-200 text-gray-900'
+        className='rounded px-3 py-2 w-full bg-gray-200 text-gray-900'
         onChange={handleUpdateText}
         autoComplete='off'
       />
